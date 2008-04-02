@@ -1,0 +1,24 @@
+2006-10-09
+	* Change : pkg-config を使うように変更( kou )
+	* Fix: rbsm.js を添付し忘れていたので追加
+
+2006-10-03
+	* Change : 内部の日本語をUTF-8に変更 
+	* : Google Code にアップロード 
+
+2006-07-25
+	* Change : bind_object の廃止。set_property に統一
+	* Change : eval を SpiderMonkey::Value
+	のメソッドに変更。SpiderMonkey,SpiderMonkey::Context へは Valueへのdelegate
+	とする
+
+2006-07-18
+	* Change : JavaScriptオブジェクトの関数の呼び出しメソッドを call_function に変更
+
+2006-06-28
+	* : eval の動作を変更。プリミティブ値を返す場合は、Ruby型に返還して返す
+
+2006-06-27
+	* Windows : Win32対応 http://rubyist.g.hatena.ne.jp/miyamuko/
+
+
