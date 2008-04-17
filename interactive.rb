@@ -18,6 +18,14 @@ end
 
 class SpiderMonkey::Value
   
+  def to_proc
+    if typeof == "function"
+      proc {|*args| self.call_function("call", self, *args) }
+    else
+      raise TypeError, "You cannot convert a #{typeof} to a proc"
+    end
+  end
+  
   def method_missing(meth, *args)
     if val = meth.to_s.match(/^(.*)=$/)
       set_property(val[1], *args)
